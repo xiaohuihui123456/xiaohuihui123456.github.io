@@ -17,27 +17,27 @@
 
 <meta name="description" content="数据库优化的目的1.避免出现页面访问错误 由于数据库连接timeout产生页面5XX错误 由于慢查询造成页面无法加载 由于阻塞造成数据无法提交2.增加数据库的稳定性 很多数据库问题都是由于低效的查询引起的3.优化用户体验 流畅页面的访问速度 良好的网站功能体验  数据库优化的方面 SQL以及索引优化1. 如何发现有问题的sql？使用Mysql慢查询日志对有效率问题的sql进行监控：  查看是否开启">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql性能优化-学习笔记">
-<meta property="og:url" content="http://yoursite.com/2018/09/24/mysql性能优化-学习笔记/index.html">
+<meta property="og:title" content="mysql性能优化">
+<meta property="og:url" content="http://yoursite.com/2018/09/28/mysql性能优化/index.html">
 <meta property="og:site_name" content="xiaohuihui&#39;s Blog">
 <meta property="og:description" content="数据库优化的目的1.避免出现页面访问错误 由于数据库连接timeout产生页面5XX错误 由于慢查询造成页面无法加载 由于阻塞造成数据无法提交2.增加数据库的稳定性 很多数据库问题都是由于低效的查询引起的3.优化用户体验 流畅页面的访问速度 良好的网站功能体验  数据库优化的方面 SQL以及索引优化1. 如何发现有问题的sql？使用Mysql慢查询日志对有效率问题的sql进行监控：  查看是否开启">
 <meta property="og:locale" content="zh">
-<meta property="og:image" content="http://yoursite.com/2018/09/24/mysql性能优化-学习笔记/images/1.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/24/mysql性能优化-学习笔记/images/12.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/24/mysql性能优化-学习笔记/images/2.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/24/mysql性能优化-学习笔记/images/3.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/24/mysql性能优化-学习笔记/images/4.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/24/mysql性能优化-学习笔记/images/5.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/24/mysql性能优化-学习笔记/images/6.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/24/mysql性能优化-学习笔记/images/7.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/24/mysql性能优化-学习笔记/images/8.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/24/mysql性能优化-学习笔记/images/9.png">
-<meta property="og:image" content="http://yoursite.com/2018/09/24/mysql性能优化-学习笔记/images/10.png">
-<meta property="og:updated_time" content="2018-09-24T14:54:59.208Z">
+<meta property="og:image" content="http://yoursite.com/2018/09/28/mysql性能优化/1.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/28/mysql性能优化/12.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/28/mysql性能优化/2.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/28/mysql性能优化/3.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/28/mysql性能优化/4.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/28/mysql性能优化/5.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/28/mysql性能优化/6.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/28/mysql性能优化/7.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/28/mysql性能优化/8.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/28/mysql性能优化/9.png">
+<meta property="og:image" content="http://yoursite.com/2018/09/28/mysql性能优化/10.png">
+<meta property="og:updated_time" content="2018-09-28T08:57:59.162Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mysql性能优化-学习笔记">
+<meta name="twitter:title" content="mysql性能优化">
 <meta name="twitter:description" content="数据库优化的目的1.避免出现页面访问错误 由于数据库连接timeout产生页面5XX错误 由于慢查询造成页面无法加载 由于阻塞造成数据无法提交2.增加数据库的稳定性 很多数据库问题都是由于低效的查询引起的3.优化用户体验 流畅页面的访问速度 良好的网站功能体验  数据库优化的方面 SQL以及索引优化1. 如何发现有问题的sql？使用Mysql慢查询日志对有效率问题的sql进行监控：  查看是否开启">
-<meta name="twitter:image" content="http://yoursite.com/2018/09/24/mysql性能优化-学习笔记/images/1.png">
+<meta name="twitter:image" content="http://yoursite.com/2018/09/28/mysql性能优化/1.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -69,7 +69,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>mysql性能优化-学习笔记 | xiaohuihui&#39;s Blog</title>
+<title>mysql性能优化 | xiaohuihui&#39;s Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -269,11 +269,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-mysql性能优化-学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-mysql性能优化" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/09/24/mysql性能优化-学习笔记/" class="article-date">
-      <time datetime="2018-09-24T14:54:59.207Z" itemprop="datePublished">2018-09-24</time>
+      <a href="/2018/09/28/mysql性能优化/" class="article-date">
+      <time datetime="2018-09-28T08:53:10.000Z" itemprop="datePublished">2018-09-28</time>
 </a>
 
 
@@ -288,7 +288,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      mysql性能优化-学习笔记
+      mysql性能优化
     </h1>
   
 
@@ -313,7 +313,7 @@
 <li>流畅页面的访问速度</li>
 <li>良好的网站功能体验</li>
 </ul>
-<h2 id="数据库优化的方面"><a href="#数据库优化的方面" class="headerlink" title="数据库优化的方面"></a>数据库优化的方面</h2><p><img src="./images/1.png" alt="数据库优化的方面"></p>
+<h2 id="数据库优化的方面"><a href="#数据库优化的方面" class="headerlink" title="数据库优化的方面"></a>数据库优化的方面</h2><p><img src="/2018/09/28/mysql性能优化/1.png" alt="数据库优化的方面"></p>
 <h2 id="SQL以及索引优化"><a href="#SQL以及索引优化" class="headerlink" title="SQL以及索引优化"></a>SQL以及索引优化</h2><h3 id="1-如何发现有问题的sql？"><a href="#1-如何发现有问题的sql？" class="headerlink" title="1. 如何发现有问题的sql？"></a>1. 如何发现有问题的sql？</h3><p>使用Mysql慢查询日志对有效率问题的sql进行监控：</p>
 <ul>
 <li>查看是否开启慢查询日志 ：<code>show variables like &#39;slow_query_log&#39;</code></li>
@@ -342,7 +342,7 @@
 <li>IO大的sql<br> 注意pt-query-digest分析中的Rows examine项</li>
 <li>未命中索引的sql<br> 注意pt-query-digest分析中Rows examine和Rows Send的对比<br> （Rows examine表示扫描的行数，Rows Send表示实际发送出来的行数）<h3 id="5-如何分析sql查询"><a href="#5-如何分析sql查询" class="headerlink" title="5. 如何分析sql查询"></a>5. 如何分析sql查询</h3>使用explain或者desc查询sql的执行计划：</li>
 </ol>
-<p><img src="./images/12.png" alt="sql执行计划"></p>
+<p><img src="/2018/09/28/mysql性能优化/12.png" alt="sql执行计划"></p>
 <p>explain各列的含义:</p>
 <ul>
 <li>table：显示这一行的数据是关于哪张表的</li>
@@ -369,8 +369,8 @@
 <h3 id="6-sql优化的例子："><a href="#6-sql优化的例子：" class="headerlink" title="6. sql优化的例子："></a>6. sql优化的例子：</h3><ol>
 <li>count()和max()的优化方法:</li>
 </ol>
-<p><img src="./images/2.png" alt="优化前执行计划"><br><strong>优化方法：</strong><br>对count或者max的列加索引：<code>create index idx_payment_date on payment(payment_date);</code></p>
-<p><img src="./images/3.png" alt="优化后执行计划"></p>
+<p><img src="/2018/09/28/mysql性能优化/2.png" alt="优化前执行计划"><br><strong>优化方法：</strong><br>对count或者max的列加索引：<code>create index idx_payment_date on payment(payment_date);</code></p>
+<p><img src="/2018/09/28/mysql性能优化/3.png" alt="优化后执行计划"></p>
 <p>注意：count的常犯错误：count(*)的结果是包含null的，count(列名)的结果是不包含该列为null的。</p>
 <ol start="2">
 <li>子查询的优化：<br> 通常情况下，需要把子查询优化为join查询，但在优化时要注意关联键是否有一对多的关系，要注意重复数据。<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> t <span class="keyword">where</span> t.id <span class="keyword">in</span> (<span class="keyword">select</span> t1.id <span class="keyword">from</span> t1);</span><br></pre></td></tr></table></figure>
@@ -382,28 +382,28 @@
 <li>group by的优化：</li>
 </ol>
 <p>查询每个演员所参演的电影的数量：</p>
-<p><img src="./images/4.png" alt="优化前执行计划"></p>
+<p><img src="/2018/09/28/mysql性能优化/4.png" alt="优化前执行计划"></p>
 <p>优化后：</p>
-<p><img src="./images/5.png" alt="优化后执行计划"></p>
+<p><img src="/2018/09/28/mysql性能优化/5.png" alt="优化后执行计划"></p>
 <ol start="4">
 <li>limit的优化：</li>
 </ol>
 <p>limit常用于分页处理，时常会伴随order by从句使用，因此大多时候会使用Filesorts这样会造成大量的IO问题。</p>
-<p><img src="./images/6.png" alt="优化前执行计划"></p>
+<p><img src="/2018/09/28/mysql性能优化/6.png" alt="优化前执行计划"></p>
 <p>优化方法1：使用有索引的列或主键进行order by操作</p>
-<p><img src="./images/7.png" alt="优化后执行计划"></p>
+<p><img src="/2018/09/28/mysql性能优化/7.png" alt="优化后执行计划"></p>
 <p>优化方法2：记录上次返回的主键，在下次查询时使用主键过滤</p>
-<p><img src="./images/8.png" alt="再次优化后执行计划"></p>
+<p><img src="/2018/09/28/mysql性能优化/8.png" alt="再次优化后执行计划"></p>
 <h3 id="7-如何选择合适的列建立索引"><a href="#7-如何选择合适的列建立索引" class="headerlink" title="7. 如何选择合适的列建立索引"></a>7. 如何选择合适的列建立索引</h3><ol>
 <li>在where从句，group by从句，order by从句，on从句中出现的列</li>
 <li>索引字段越小越好</li>
 <li>离散度大的列放到联合索引的前面<br>eg：</li>
 </ol>
-<p><img src="./images/9.png" alt="优化前"></p>
+<p><img src="/2018/09/28/mysql性能优化/9.png" alt="优化前"></p>
 <p>这里index(staff_id,customer_id)和index(customer_id,staff_id)两个索引那个更好呢？<br>答：取决于staff_id和customer_id列的离散度，离散度越高的放到联合索引的前边</p>
 <p>如何判断列的离散程度：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="keyword">count</span>(<span class="keyword">distinct</span> customer_id),<span class="keyword">count</span>(<span class="keyword">distinct</span> staff_id) <span class="keyword">from</span> payment;</span><br></pre></td></tr></table></figure>
-<p><img src="./images/10.png" alt="enter description here"></p>
+<p><img src="/2018/09/28/mysql性能优化/10.png" alt="enter description here"></p>
 <p>统计的列的数据越大，离散度越高。<br>这里由于customer_id的离散度更大，所以应该创建index(customer_id,staff_id)的联合索引</p>
 <h3 id="8-索引的维护和优化"><a href="#8-索引的维护和优化" class="headerlink" title="8. 索引的维护和优化"></a>8. 索引的维护和优化</h3><p>使用pt-duplicate-key-checker工具查询重复及冗余索引：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pt-duplicate-key-checker -uroot -p123 -h127.0.0.1</span><br></pre></td></tr></table></figure>
@@ -425,13 +425,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/09/24/mysql性能优化-学习笔记/">mysql性能优化-学习笔记</a></p>
+        <p><span>本文标题:</span><a href="/2018/09/28/mysql性能优化/">mysql性能优化</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">小灰灰</a></p>
-        <p><span>发布时间:</span>2018-09-24, 22:54:59</p>
-        <p><span>最后更新:</span>2018-09-24, 22:54:59</p>
+        <p><span>发布时间:</span>2018-09-28, 16:53:10</p>
+        <p><span>最后更新:</span>2018-09-28, 16:57:59</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/09/24/mysql性能优化-学习笔记/" title="mysql性能优化-学习笔记">http://yoursite.com/2018/09/24/mysql性能优化-学习笔记/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/24/mysql性能优化-学习笔记/　　作者: 小灰灰" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/09/28/mysql性能优化/" title="mysql性能优化">http://yoursite.com/2018/09/28/mysql性能优化/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/28/mysql性能优化/　　作者: 小灰灰" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -483,7 +483,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"mysql性能优化-学习笔记　| xiaohuihui's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"mysql性能优化　| xiaohuihui's Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -513,7 +513,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/24/mysql性能优化-学习笔记/">mysql性能优化-学习笔记</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/28/mysql性能优化/">mysql性能优化</a></li></ul>
 
 
 
